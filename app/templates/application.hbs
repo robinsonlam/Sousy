@@ -1,5 +1,16 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<h1>Sousy</h1>
+
+<ul class="globalNavigation">
+  <li>
+    {{#link-to "application"}}
+      Home
+    {{/link-to}}
+  </li>
+  <li>
+    {{#link-to "shopping-lists"}}
+      Shopping Lists
+    {{/link-to}}
+  </li>
+</ul>
 
 {{outlet}}

@@ -1,0 +1,11 @@
+<h2>{{title}}</h2>
+
+<ul>
+  {{#each listItems as |item|}}
+    <li {{action "alertItemName" item}}>
+      {{item}}
+    </li>
+  {{/each}}
+</ul>
+
+{{yield}}
