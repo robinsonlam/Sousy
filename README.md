@@ -1,4 +1,23 @@
-# sousy
+# Sousy
+
+Your personal Sous-Chef!
+
+An assistant for all your home-cheffing needs.
+
+Built using Ember.js with a Ruby on Rails back-end.
+
+## Features
+
+* Shopping List (TBI)
+  - Check list (TBI)
+  - Google search items (TBI)
+* Serving change (TBI)
+* Recipe Save (TBI)
+* Weekly Planner (TBI)
+* Weekly Groceries List (TBI)
+* Pricing for budgeting (TBI)
+
+# Ember CLI
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
