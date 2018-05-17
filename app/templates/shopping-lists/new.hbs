@@ -1,3 +1,7 @@
 <h1>Create a new shopping list</h1>
 
+{{shopping-lists/new/new-list shoppingList=shoppingList newItem=newItem}}
+
+{{shopping-lists/new/new-item newItem=newItem addItem=(action 'addItem' shoppingList.items newItem)}}
+
 {{outlet}}

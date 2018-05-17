@@ -1,0 +1,19 @@
+<form {{action 'saveList' shoppingList newItem on='submit'}}>
+  {{input value=shoppingList.title class="title"}}
+
+  {{#each shoppingList.items as |item|}}
+    <div class="item">
+      <div class="amount">
+        {{input type="number" value=item.amount.value class="value"}}
+        {{input value=item.amount.measurement class="measurement"}}
+      </div>
+      <div class="name">
+        {{input value=item.name}}
+      </div>
+    </div>
+  {{/each}}
+
+  <button type="submit" class="submitButton">Save List</button>
+</form>
+
+{{yield}}

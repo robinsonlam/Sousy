@@ -1,0 +1,43 @@
+.shoppingList {
+  padding: $padding-general;
+  &.editable {
+    border: 1px solid $color-main;
+  }
+
+  input {
+    padding: $padding-half;
+    margin-bottom: $padding-half;
+
+    border: none;
+    border-bottom: 1px solid $color-grey;
+
+    &:active, &:focus {
+      border: none;
+      border-bottom: 1px solid $color-black;
+      outline: none;
+    }
+  }
+
+  .title {
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+  .item {
+    display: flex;
+
+    &.new {
+      border: 1px solid $color-black;
+    }
+    
+    .amount {
+      .value {
+        max-width: 50px;
+      }
+    }
+
+    .name {
+      padding-left: $padding-half;
+    }
+  }
+}

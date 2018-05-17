@@ -1,0 +1,15 @@
+<form onSubmit={{action 'addItem'}}>
+  <div class="item new">
+    <div class="amount">
+      {{input type="number" value=newItem.amount.value class="value"}}
+      {{input value=newItem.amount.measurement class="measurement"}}
+    </div>
+    <div class="name">
+      {{input value=newItem.name}}
+    </div>
+  </div>
+
+  <button type="submit" class="submitButton">Add Item</button>
+</form>
+
+{{yield}}
