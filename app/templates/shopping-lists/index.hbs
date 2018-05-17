@@ -1,7 +1,7 @@
-<h2>{{title}}</h2>
+<h1>Shopping lists</h1>
 
 <ul>
-  {{#each listItems as |item|}}
+  {{#each model as |item|}}
     <li {{action "alertItemName" item}}>
       {{item}}
     </li>
