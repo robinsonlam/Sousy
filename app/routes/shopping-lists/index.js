@@ -1,8 +1,16 @@
 import Route from '@ember/routing/route';
 
 export default Route.extend({
-  model() {
+  async model() {
     // NOTE: Fetch data from API here?
-    return ['Big Breakfast', 'Turkey Sandwiches', 'Hot Chicken Roast'];
+    try {
+      const store = this.get('store');
+
+      let shoppingLists = store.findAll('shopping-list');
+      return shoppingLists;
+    } catch (e) {
+      alert(`Error retrieving Shopping Lists: ${e}`);
+      return ['Big Breakfast', 'Turkey Sandwiches', 'Hot Chicken Roast'];
+    }
   },
 });

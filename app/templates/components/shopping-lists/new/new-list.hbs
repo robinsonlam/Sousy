@@ -1,4 +1,4 @@
-<form {{action 'saveList' shoppingList newItem on='submit'}}>
+<form onSubmit={{action 'saveList'}}>
   {{input value=shoppingList.title class="title"}}
 
   {{#each shoppingList.items as |item|}}

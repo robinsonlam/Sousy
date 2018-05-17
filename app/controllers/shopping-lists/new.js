@@ -1,4 +1,6 @@
 import Controller from '@ember/controller';
+import { get } from '@ember/object';
+
 import { alias } from '@ember/object/computed';
 
 export default Controller.extend({
@@ -6,8 +8,23 @@ export default Controller.extend({
   newItem: alias('model.newItem'),
 
   actions: {
-    addItem(shoppingListItems, itemToAdd) {
-      shoppingListItems.pushObject(itemToAdd);
+    async saveList() {
+      try {
+        const store = this.get('store');
+        const shoppingList = this.get('shoppingList');
+        // verify shoppingList
+        store.createRecord('shopping-list', shoppingList);
+      } catch (e) {
+        alert(`Error saving list: ${e}`);
+      }
+    },
+
+    async addItem(shoppingListItems, itemToAdd) {
+      try {
+        shoppingListItems.pushObject(itemToAdd);
+      } catch (e) {
+        alert(`Error: ${e}`);
+      }
     }
   }
 });

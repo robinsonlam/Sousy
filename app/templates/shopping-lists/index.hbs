@@ -1,9 +1,12 @@
 <h1>Shopping lists</h1>
 
 <ul>
-  {{#each model as |item|}}
-    <li {{action "alertItemName" item}}>
-      {{item}}
+  {{#each model as |shoppingList|}}
+    <li {{action "alertItemName" shoppingList}}>
+      {{shoppingList.title}}
+      {{#each shoppingList.items as |item|}}
+        <p>{{item.amount.value}} {{item.amount.measurement}} {{item.name}}</p>
+      {{/each}}
     </li>
   {{/each}}
 </ul>
